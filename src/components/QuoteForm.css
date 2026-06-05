@@ -1,0 +1,238 @@
+.quote-form-wrapper {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.quote-form-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 32px;
+}
+
+.quote-form-card__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.quote-form-card__header svg {
+  color: var(--blue);
+}
+
+.quote-form-card__header h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quote-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.quote-form__row--3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.quote-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.quote-form__field--full {
+  grid-column: 1 / -1;
+}
+
+.quote-form__field label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.quote-form__field input,
+.quote-form__field select {
+  padding: 12px 14px;
+  border: 1.5px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--gray-800);
+  transition: var(--transition);
+  background: var(--white);
+}
+
+.quote-form__field input:focus,
+.quote-form__field select:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(46, 134, 222, 0.1);
+}
+
+.quote-form__field input::placeholder {
+  color: var(--gray-400);
+}
+
+/* ===== Service Type Radio ===== */
+.quote-form__service-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.quote-form__service-option {
+  flex: 1;
+  min-width: 140px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 1.5px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.quote-form__service-option input {
+  display: none;
+}
+
+.quote-form__service-option:hover {
+  border-color: var(--blue);
+}
+
+.quote-form__service-option--active {
+  border-color: var(--blue);
+  background: rgba(46, 134, 222, 0.05);
+  color: var(--blue);
+}
+
+/* ===== Estimate Card ===== */
+.quote-estimate-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  align-self: flex-start;
+  position: sticky;
+  top: 100px;
+}
+
+.quote-estimate-card__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.quote-estimate-card__header svg {
+  color: var(--green);
+}
+
+.quote-estimate-card__header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.quote-estimate {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.quote-estimate__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quote-estimate__row span {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+}
+
+.quote-estimate__row strong {
+  font-size: 0.95rem;
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.quote-estimate__divider {
+  height: 1px;
+  background: var(--gray-200);
+  margin: 4px 0;
+}
+
+.quote-estimate__row--total strong {
+  font-size: 1.3rem;
+  color: var(--blue);
+}
+
+.quote-estimate__note {
+  font-size: 0.78rem;
+  color: var(--gray-500);
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+.quote-estimate__cta {
+  width: 100%;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 14px;
+}
+
+.quote-estimate__empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--gray-400);
+}
+
+.quote-estimate__empty svg {
+  margin: 0 auto 12px;
+}
+
+.quote-estimate__empty p {
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .quote-form-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-form__row {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-form__row--3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .quote-estimate-card {
+    position: static;
+  }
+
+  .quote-form__service-options {
+    flex-direction: column;
+  }
+}

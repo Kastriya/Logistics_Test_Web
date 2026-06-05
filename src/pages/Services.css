@@ -1,0 +1,114 @@
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.service-detail {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 40px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+}
+
+.service-detail:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.service-detail--reverse {
+  direction: rtl;
+}
+
+.service-detail--reverse > * {
+  direction: ltr;
+}
+
+.service-detail__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-sm);
+  background: rgba(46, 134, 222, 0.1);
+  color: var(--blue);
+  margin-bottom: 16px;
+}
+
+.service-detail__content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.service-detail__content p {
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.service-detail__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.service-detail__features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--gray-700);
+}
+
+.service-detail__features li svg {
+  color: var(--green);
+  flex-shrink: 0;
+}
+
+.service-detail__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-detail__placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, var(--gray-50), var(--gray-100));
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+  opacity: 0.4;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .service-detail,
+  .service-detail--reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    padding: 24px;
+  }
+
+  .service-detail--reverse > * {
+    direction: ltr;
+  }
+
+  .service-detail__visual {
+    order: -1;
+  }
+
+  .service-detail__features {
+    grid-template-columns: 1fr;
+  }
+}

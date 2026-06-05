@@ -1,0 +1,210 @@
+/* ===== Page Header (shared) ===== */
+.page-header {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  padding: 140px 0 60px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== Company Story ===== */
+.about-story__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.about-story__content p {
+  font-size: 0.95rem;
+  color: var(--gray-700);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about-story__card {
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid var(--gray-200);
+}
+
+.about-story__stat {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.about-story__stat svg {
+  color: var(--blue);
+  flex-shrink: 0;
+}
+
+/* ===== Mission, Vision, Values ===== */
+.about-mvv {
+  background: var(--gray-50);
+}
+
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.mvv-card {
+  background: var(--white);
+  padding: 36px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-200);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.mvv-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.mvv-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(46, 134, 222, 0.1);
+  color: var(--blue);
+  margin-bottom: 16px;
+}
+
+.mvv-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.mvv-card p {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* ===== Team ===== */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.team-card {
+  text-align: center;
+  padding: 32px 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.team-card__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue), var(--navy));
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 auto 16px;
+}
+
+.team-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.team-card p {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+}
+
+/* ===== Certifications ===== */
+.about-certs {
+  background: var(--gray-50);
+}
+
+.certs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--white);
+  border-radius: 50px;
+  border: 1px solid var(--gray-200);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--navy);
+  transition: var(--transition);
+}
+
+.cert-badge:hover {
+  border-color: var(--blue);
+  box-shadow: var(--shadow-sm);
+}
+
+.cert-badge svg {
+  color: var(--blue);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .about-story__grid {
+    grid-template-columns: 1fr;
+  }
+  .mvv-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
